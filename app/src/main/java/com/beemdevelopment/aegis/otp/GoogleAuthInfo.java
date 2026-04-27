@@ -231,9 +231,7 @@ public class GoogleAuthInfo implements Transferable, Serializable {
                     case ALGORITHM_SHA512:
                         algo = "SHA512";
                         break;
-                    case ALGORITHM_SHA384:
-                        algo = "SHA384";
-                        break;
+
                     default:
                         throw new GoogleAuthInfoException(uri, String.format("Unsupported hash algorithm: %d", params.getAlgorithm().ordinal()));
                 }
@@ -419,9 +417,7 @@ public class GoogleAuthInfo implements Transferable, Serializable {
                     case "SHA256":
                         parameters.setAlgorithm(GoogleAuthProtos.MigrationPayload.Algorithm.ALGORITHM_SHA256);
                         break;
-                    case "SHA384":
-                        parameters.setAlgorithm(GoogleAuthProtos.MigrationPayload.Algorithm.ALGORITHM_SHA384);
-                        break;
+
                     case "SHA512":
                         parameters.setAlgorithm(GoogleAuthProtos.MigrationPayload.Algorithm.ALGORITHM_SHA512);
                         break;
