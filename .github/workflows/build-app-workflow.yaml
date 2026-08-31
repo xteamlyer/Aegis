@@ -14,7 +14,7 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
       - name: Build the app
-        run: ./gradlew build
+        run: ./gradlew assembleRelease
       - uses: actions/upload-artifact@v4
         with:
           name: apk
